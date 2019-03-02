@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container">
+
+    <h2>Welcome to code girls level up</h2>
+
+
+
+    <div class="container posts" >
+        {% for post in posts %}
+        <h3>{{post.title}}</h3>
+        <hr>
+        <p>{{post.content}}</p>
+        <p>By {{ post.author}} on {{post.date_posted}}</p>
+
+        {% endfor %}
+
+
+    </div>
+
+</div>
+
+
+<button class="btn btn-success">Add post</button>
+
+{% endblock %}
